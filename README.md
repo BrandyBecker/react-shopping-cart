@@ -16,22 +16,22 @@ In this project you'll take take an existing e-commerce store and refactor the a
 
 ## Project Set Up
 
-- [x] Create a forked copy of this project.
-- [x] Add your team lead as collaborator on Github.
-- [x] Clone your OWN version of the repository in your terminal
-- [x] CD into the project base directory `cd react-shopping-cart`
-- [x] Download project dependencies by running one of these two commands `yarn` or `npm install`
-- [x] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
-- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [x] Push commits: git push origin `<firstName-lastName>`.
+- [✅] Create a forked copy of this project.
+- [✅] Add your team lead as collaborator on Github.
+- [✅] Clone your OWN version of the repository in your terminal
+- [✅] CD into the project base directory `cd react-shopping-cart`
+- [✅] Download project dependencies by running one of these two commands `yarn` or `npm install`
+- [✅] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [✅] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [✅] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [✅] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
-- [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into master (student's repository). **Please don't merge your own pull request**
-- [x] Add your team lead as a reviewer on the pull-request
-- [x] Your team lead will count the project as complete by merging the branch back into master.
-- [x] Do your magic!
+- [✅] Submit a Pull-Request to merge `<firstName-lastName>` Branch into master (student's repository). **Please don't merge your own pull request**
+- [✅] Add your team lead as a reviewer on the pull-request
+- [✅] Your team lead will count the project as complete by merging the branch back into master.
+- [✅] Do your magic!
 
 # Project - Shopping Cart
 
@@ -47,27 +47,27 @@ Before you get started, please take a few minutes and get acquainted with this a
 
 **STEP 1 - Creating ProductContext**
 
-- In `src`, create a new folder named `contexts`, this folder is going to be used to hold all of `context objects` we create.
+✅ In `src`, create a new folder named `contexts`, this folder is going to be used to hold all of `context objects` we create.
 
-- Inside that folder create a new file named `ProductContext.js`
+✅ Inside that folder create a new file named `ProductContext.js`
 
-- In this file, import the `createContext` function from the react library and create our `ProductContext`.
+✅ In this file, import the `createContext` function from the react library and create our `ProductContext`.
 
 **STEP 2 - Providing data with ProductContext**
 
-- Now that we've created our `ProductContext` we can import into our `App.js`. Now we can start providing data across our application!
+✅ Now that we've created our `ProductContext` we can import into our `App.js`. Now we can start providing data across our application!
 
-- Wrap all of your components/routes in `App.js` inside of `ProductContext.Provider` component.
+✅ Wrap all of your components/routes in `App.js` inside of `ProductContext.Provider` component. 
 
-- Next pass a value prop to your `Provider`.
+✅ Next pass a value prop to your `Provider`.
 
-- In the value prop we'll pass in the products state, and an addItem function that will allow us to add books to the cart.
+✅ In the value prop we'll pass in the products state, and an addItem function that will allow us to add books to the cart.
 
 ```js
 <ProductContext.Provider value={{ products, addItem }}>
 ```
 
-- Now that we're providing our products state and addItem function we can refactor our products route to no longer use render props.
+✅ Now that we're providing our products state and addItem function we can refactor our products route to no longer use render props.
 
 **Before**
 
@@ -85,45 +85,45 @@ Before you get started, please take a few minutes and get acquainted with this a
 <Route exact path="/" component={Products} />
 ```
 
-- After refactoring you'll notice a few errors... Don't worry we'll clean those up shortly!
+✅ After refactoring you'll notice a few errors... Don't worry we'll clean those up shortly!
 
 **STEP 3 - Consuming data with ProductContext**
 
-- Now that our `ProductContext` is now providing data we can finally consume it! To do so let's head over to our `Products` component and import the `useContext` hook as well as our `ProductContext`.
+✅ Now that our `ProductContext` is now providing data we can finally consume it! To do so let's head over to our `Products` component and import the `useContext` hook as well as our `ProductContext`.
 
-- In the component, call the `useContext` hook and pass in the context object we want to use into it.
+✅ In the component, call the `useContext` hook and pass in the context object we want to use into it.
 
-- When we do this, `useContext` is going to return value passed by our `ProductContext` Provider `value` prop. In our case we're getting back an object with two properties. A `products` property and a `addItem` property. We can go ahead and destructure those.
+✅ When we do this, `useContext` is going to return value passed by our `ProductContext` Provider `value` prop. In our case we're getting back an object with two properties. A `products` property and a `addItem` property. We can go ahead and destructure those.
 
 ```js
 const { products, addItem } = useContext(ProductContext);
 ```
 
-- Now that we have all of the data we need we can refactor our `Products` component from using props.
+✅ Now that we have all of the data we need we can refactor our `Products` component from using props.
 
-- To do so we just need to remove every instance of `props`.
+✅ To do so we just need to remove every instance of `props`.
 
-  - Remove it from the function parameters
-  - Remove it from the products map
-  - Remove it from addItem prop
+  ✅ Remove it from the function parameters
+  ✅ Remove it from the products map
+  ✅ Remove it from addItem prop
 
-- Now our `Products` component is getting it's data solely from `Context API` 😃.
+✅ Now our `Products` component is getting it's data solely from `Context API` 😃.
 
 **STEP 4 - Create the CartContext**
 
-- Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.
+✅ Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.
 
-- To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.
+✅ To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.
 
-- Inside of our new `CartContext` import `createContext` and create a new context named `CartContext`.
+✅ Inside of our new `CartContext` import `createContext` and create a new context named `CartContext`.
 
 **STEP 5 - Providing data with CartContext**
 
-- Let's go ahead and bring our newly created `CartContext` into our `App.js` and wrap all of our components inside of our `CartContext.Provider`. Make sure our `ProductContext.Provider` is still the root provider.
+✅ Let's go ahead and bring our newly created `CartContext` into our `App.js` and wrap all of our components inside of our `CartContext.Provider`. Make sure our `ProductContext.Provider` is still the root provider.
 
-- Now pass a value prop to our `CartContext.Provider`, this value prop is going to contain our `cart` state.
+✅ Now pass a value prop to our `CartContext.Provider`, this value prop is going to contain our `cart` state.
 
-- Now that we're providing our cart data, we can start to refactor our `Navigation` and `ShoppingCart` components.
+✅ Now that we're providing our cart data, we can start to refactor our `Navigation` and `ShoppingCart` components.
 
 - Let's start with our `ShoppingCart` component first. Go ahead and refactor the `ShoppingCart` route to no longer use render props. This will throw us an error, but we'll be able to resolve it quickly.
 
