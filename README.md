@@ -125,44 +125,44 @@ const { products, addItem } = useContext(ProductContext);
 
 ✅ Now that we're providing our cart data, we can start to refactor our `Navigation` and `ShoppingCart` components.
 
-- Let's start with our `ShoppingCart` component first. Go ahead and refactor the `ShoppingCart` route to no longer use render props. This will throw us an error, but we'll be able to resolve it quickly.
+✅ Let's start with our `ShoppingCart` component first. Go ahead and refactor the `ShoppingCart` route to no longer use render props. This will throw us an error, but we'll be able to resolve it quickly.
 
-- While were at it let's go ahead and remove the props from our navigation as well.
+✅ While were at it let's go ahead and remove the props from our navigation as well.
 
 **STEP 6 - The final stretch**
 
-- Our cart data is now being provided to us from our `CartContext` time to consume it!
+✅ Our cart data is now being provided to us from our `CartContext` time to consume it!
 
-- First, let's head to our `ShoppingCart` component and import the `useContext` hook and our `CartContext`.
+✅ First, let's head to our `ShoppingCart` component and import the `useContext` hook and our `CartContext`.
 
-- Now in the component, pass `CartContext` to the `useContext` hook and assign it to a variable named cart.
+✅ Now in the component, pass `CartContext` to the `useContext` hook and assign it to a variable named cart.
 
-- Inside of our component we now need to remove all instances of props.
+✅ Inside of our component we now need to remove all instances of props.
 
-  - Remove the `props` parameter
-  - Remove the `props` portion in our `getCartTotal` function
-  - Remove `props` when we're mapping over our cart
+  ✅ Remove the `props` parameter
+  ✅ Remove the `props` portion in our `getCartTotal` function
+  ✅ Remove `props` when we're mapping over our cart
 
-- Time to do the same thing for our `Navigation` component.
-  - First import the `useContext` hook and our `CartContext`
-  - Next, pass our `CartContext` to the `useContext` hook and assign it to a variable named cart.
-  - Lastly we need to remove all instances of `props`
-    - Remove `props` from our parameters
-    - Remove `props` from our cart length
+✅ Time to do the same thing for our `Navigation` component.
+  ✅ First import the `useContext` hook and our `CartContext`
+  ✅ Next, pass our `CartContext` to the `useContext` hook and assign it to a variable named cart.
+  ✅ Lastly we need to remove all instances of `props`
+    ✅ Remove `props` from our parameters
+    ✅ Remove `props` from our cart length
 
 We have now successfully converted our application into using `Context API` 🔥
 
 ## _MVP Requirements:_
 
-- Create a `ProductContext` and a `CartContext`
-- Use the Provider Component from `ProductContext` and `CartContext` to provide data to child components
-- Consume data using the `useContext` hook from `ProductContext` and `CartContext`
+✅ Create a `ProductContext` and a `CartContext`
+✅ Use the Provider Component from `ProductContext` and `CartContext` to provide data to child components
+✅ Consume data using the `useContext` hook from `ProductContext` and `CartContext`
 
 ## Stretch Problems
 
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
 
-- Create a `removeItem` function that allows you to remove an item from your cart with a click of a button. This `removeItem` function should be able to be consumed from your `ShoppingCartItem` component.
+✅ Create a `removeItem` function that allows you to remove an item from your cart with a click of a button. This `removeItem` function should be able to be consumed from your `ShoppingCartItem` component.
   Remember each item has an `id` this will help out a lot while creating your removeItem function!
 
 - Persist Cart Items using `localStorage`. (If you try this one, it will be a bit tricky to get our items to populate the shopping cart on a refresh. You'll have to think about where the data actually lives, and how you can get data there from localStorage when the app is being mounted after a refresh. Good luck!)
